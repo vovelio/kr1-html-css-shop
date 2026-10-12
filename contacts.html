@@ -41,7 +41,7 @@
           </a>
         </li>
         <li class="site-nav__item">
-    <a class="site-nav__link" href="index.html#contacts">
+    <a class="site-nav__link" href="contacts.html#contacts">
       Обратная связь
     </a>
   </li>
@@ -69,14 +69,44 @@
         <li>E-mail: info@example.com</li>
         <li>Адрес: г. Москва, учебный проект</li>
       </ul>
-    </section>
-
-    <section class="section" id="feedback">
-      <h2>Обратная связь</h2>
+      <div id="contacts">
       <p>
-        Для отправки заявки используйте форму в модальном окне на главной странице.
+        <h2>Форма обратной связи</h2>
+        Для связи с нами вы можете использовать форму обратной связи ниже.
       </p>
-      <a class="button button--primary" href="index.html#contacts">Перейти к форме</a>
+      <form class="contact-form" action="#" method="post">
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="name">Имя</label>
+          <input 
+          class="contact-form__input"
+          type="text" 
+          id="name" 
+          name="name" 
+          required
+          >
+        </div>
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="email">E-mail</label>
+          <input 
+          class="contact-form__input"
+          type="email" 
+          id="email" 
+          name="email" 
+          required
+          >
+        </div>
+        <div class="contact-form__field">
+          <label class="contact-form__label" for="message">Сообщение</label>
+          <textarea 
+          class="contact-form__textarea" 
+          id="message" 
+          name="message" 
+          required>
+        </textarea>
+        </div>
+        <button type="submit" class="button button--primary">Отправить</button>
+      </form>
+      </div>
     </section>
   </main>
 
