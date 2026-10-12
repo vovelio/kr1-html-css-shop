@@ -259,6 +259,7 @@ a:focus-visible {
 }
 
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
@@ -284,6 +285,7 @@ a:focus-visible {
 }
 
 .catalog-filters {
+  position: sticky;
   grid-area: filters;
   padding: var(--space-md);
   border: 1px solid var(--color-border);
@@ -295,6 +297,17 @@ a:focus-visible {
   grid-area: products;
 }
 
+.product-card__badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  z-index: 1;
+
+  padding: 4px 8px;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
 
 .product-card:hover {
   border-color: var(--color-primary);
@@ -383,6 +396,54 @@ html {
    5. Форма и модальное окно
    =============================== */
 
+
+.contact-form {
+  max-width: 600px;
+}
+
+.contact-form__field {
+  margin-bottom: var(--space-md);
+}
+
+.contact-form__label {
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+.contact-form__input,
+.contact-form__select,.contact-form__textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font: inherit;
+}
+
+.contact-form__input,
+.contact-form__select {
+  height: 44px;
+} 
+
+.contact-form__select {
+  background-color: var(--color-bg);
+}
+
+.contact-form__input:hover,
+.contact-form__select:hover,
+.contact-form__textarea:hover {
+  border-color: var(--color-primary);
+}
+
+.contact-form__input:focus-visible,
+.contact-form__select:focus-visible,
+.contact-form__textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.catalog-filters__title {
+  margin-top: 0;
+}
 .order-dialog {
   width: min(100% - 32px, 560px);
   padding: var(--space-lg);
