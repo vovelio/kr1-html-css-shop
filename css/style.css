@@ -196,7 +196,6 @@ a:focus-visible {
 .button--primary {
   color: var(--color-white);
   background-color: var(--color-primary);
-  margin-right: auto;
 }
 
 .button--primary:hover {
@@ -328,8 +327,21 @@ a:focus-visible {
 }
 
 .product-card__button {
-  margin-top: auto;
   align-self: flex-start;
+}
+
+.product-card__actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.product-card__image{
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
 }
 
 .product-table {
@@ -382,6 +394,10 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.order-form {
+  max-width: 600px;
+}
+
 .order-form__field {
   margin-bottom: var(--space-md);
 }
@@ -399,6 +415,15 @@ html {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   font: inherit;
+}
+
+.order-form__input,
+.order-form__select {
+  height: 44px;
+}
+
+.order-form__select {
+  background-color: var(--color-bg);
 }
 
 .order-form__input:hover,
